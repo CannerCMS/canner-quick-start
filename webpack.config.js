@@ -92,7 +92,8 @@ module.exports = {
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
     new CopyWebpackPlugin([
-      {from: 'static', to: 'static'}
+      {from: 'static', to: 'static'},
+      {from: 'netlifyFiles', to: './'}
     ])
   ]
 };
