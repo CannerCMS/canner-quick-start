@@ -13,7 +13,7 @@ import logo from '../static/logo-word-white.png';
 
 class CMSExample extends React.Component {
   router = new Router({
-    baseUrl: "/dashboard"
+    baseUrl: "/canner-quick-start"
   });
 
   componentDidMount() {

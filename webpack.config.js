@@ -11,8 +11,9 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: devMode ? '/' : 'https://canner.github.io/canner-quick-start/'
   },
+  mode: process.env.NODE_ENV || 'development',
   resolve: {
     alias: {
       pages: path.join(__dirname, 'pages'),
