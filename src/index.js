@@ -8,8 +8,7 @@ import Router from '@canner/router';
 
 // your schema
 import schema from '../schema/canner.schema.js';
-
-import logo from '../static/logo-word-white.png';
+import client from '../schema/utils/client';
 
 class CMSExample extends React.Component {
   router = new Router({
@@ -32,13 +31,17 @@ class CMSExample extends React.Component {
         router={this.router}
         navbarConfig={{
           showSaveButton: true,
-          logo
         }}
         sidebarConfig={{
+          logo: {
+            src: "../static/logo-word-white.png"
+          },
           menuConfig: true
         }}
       >
-        <Canner />
+        <Canner
+          client={client}
+        />
       </Container>
     );
   }
